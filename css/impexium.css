@@ -1,0 +1,436 @@
+body {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  color: #032E3F;
+  background: #ffffff;
+  letter-spacing: 0.02em;
+	line-height: 24px;
+}
+
+p, UL LI, UL LI LI, UL LI LI LI, OL LI, OL OL LI, OL OL OL LI, OL UL LI, td {
+	font-size: 16px;
+}
+
+/* Grid */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 875px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;  }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+	}
+  .column,
+  .columns {
+    margin-left: 2%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 14%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 31.7666666669%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 49%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 700; 
+	font-family: 'Bitter', serif;}
+h1 { font-size: 4.0rem; line-height: 1;}
+h2 { font-size: 3.6rem; line-height: 1.25;}
+h3 { font-size: 2.6rem; line-height: 1.3; }
+h4 { font-size: 2.4rem; line-height: 1.35; }
+h5 { font-size: 1.8rem; line-height: 1.5;  }
+h6 { font-size: 1.5rem; line-height: 1.6; }
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  h1 { font-size: 5.0rem; }
+  h2 { font-size: 4.2rem; }
+h3 { font-size: 2.6rem;}
+  h4 { font-size: 3.0rem; }
+  h5 { font-size: 2.4rem; }
+  h6 { font-size: 1.5rem; }
+}
+
+p {
+  margin-top: 0; }
+
+
+
+/* Links */
+a, a:link, a:visited {
+  	color: #CFA23D;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+a:hover {
+  color: #CFA23D;
+text-decoration: underline;}
+
+
+/* Lists*/
+ul {
+    list-style: none;
+}
+
+ol {
+  list-style: decimal outside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0;
+margin-left: 0;}
+ul ul, ul ol, ol ol, ol ul {
+    margin: 6px 0 0 20px;
+    font-size: 90%;
+}
+li {
+  margin-bottom: 6px; }
+
+
+
+.cms-page .page-content ul li::before {
+    content: "\2022";
+    color: #5A7735;
+    font-weight: 900;
+    padding: 0 10px 0 0px;
+}
+
+.cms-page .page-content ul.nav-tabs>li::before, 
+.cms-page-my-profile .page-content ul li::before, 
+.wizard-table ul.steps li::before, 
+.wizard-table ul.sub-categories-ul li::before {
+     content: none;
+}
+
+/* Utilities */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width, .img-responsive {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*magic*/
+}
+
+/* Other */
+h1::after {
+    content: none !important;
+}
+
+#footer_container .four.columns.center img {
+	margin: 0 auto;
+}
+
+.nav>li>a {
+    color: #007498;
+}
+
+.copyright {
+    background: none !important;
+    width: 100%;
+    height: auto !important;
+    text-transform: none !important;
+    text-align: center;
+    font-weight: inherit !important;
+    letter-spacing: 0 !important;
+    position: relative;
+}
+
+.copyright::before {
+	content: none !important;
+}
+
+#header .col-md-3 {
+	padding: 0;
+}
+
+.menu_side_content p {
+    line-height: 18px;
+}
+
+#page_title {
+    margin-bottom: 0px !important;
+}
+
+#navigation, .nav_bg {
+    border-bottom-right-radius: 50px !important;
+}
+
+.footer_logo {
+	margin-bottom: 5px;
+}
+
+#main_pnlSiteTemplateFooter.col-md-12, #main_pnlSiteTemplateHeader.col-md-12 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.page-sidebar {
+ /*   margin-top: 318px;*/
+    margin-top: 0;
+}
+
+ul.page-sidebar-menu > li.active > a, ul.page-sidebar-menu > li.active > span > a {
+    background: #007498 !important;
+}
+
+ul.page-sidebar-menu > li.active > a .selected, ul.page-sidebar-menu > li.active > span > a .selected {
+    background-image: none !important;
+}
+
+.form-wizard .steps {
+    height: auto;
+}
+
+.login-container h3 {
+    margin-top: 15px;
+}
+
+.login-form a.login-help {
+    margin-top: 0px; 
+}
+
+
+.login .content label { color: #000000 !important; }
+.login .content p, .login .content label {
+    color: #000000 !important;
+	font-size: 16px !important;
+}
+.login .content h3 {
+    color: #000000 !important;
+	font-style: normal;
+	font-size: 18px;
+	font-weight: 700 !important;
+}
+.login .content h4 {
+    color: #000000 !important;
+	text-transform: none;
+	font-size: 18px;
+	font-weight: 700 !important;
+}
+
+#main_content_Login_LoginPanel a, #main_content_Login_ForgotPasswordPanel a, #main_content_Login_CreateUserForm_lnkSignupGoToLogin {
+    color: #CFA23D !important;
+}
+
+#main_content_Login_ForgotPasswordPanel.forgot-form, #main_content_Login_SignupPanel.register-form {
+    background-color: #ffffff !important;
+} 
+
+#main_content_Login_LoginPanel h3.form-title {
+	font-style: normal;
+	font-size: 18px;
+	font-weight: 700 !important;
+}
+
+#main_content_Login_LoginPanel .btn.green, #main_content_Login_ForgotPasswordPanel .btn.green, #main_content_Login_SignupPanel .btn.green{
+    background-color: #007498  !important;
+}
+
+#main_content_Login_LoginPanel .btn.green:hover, #main_content_Login_ForgotPasswordPanel .btn.green:hover, #main_content_Login_SignupPanel .btn.green:hover {
+    background-color: #007498  !important;
+    text-decoration: underline;
+}
+
+.backstretch {
+    display: none !important;
+}
+
+.login {
+    background-color: #fff !important;
+}
+
+.login .logo {
+    height: auto;
+    max-width: 450px;
+    margin-top: 0;
+}
+
+.login .content, .body-signup.login .content, .body-signup .login-container {
+    width: auto !important;
+}
+
+.login .content .login-form, .login .content .forgot-form, .login .content .register-form {
+    padding: 20px 0px 15px 0px;
+    margin-bottom: 15px;
+}
+
+#main_content_Login_pnlLogin .btn.green, 
+#main_content_Login_pnlLogin .btn.green:hover, 
+#main_content_Login_pnlLogin .btn.green:focus, 
+#main_content_Login_pnlLogin .btn.green:active, 
+#main_content_Login_pnlLogin .btn.green.active, 
+#main_content_Login_ForgotPasswordPanel .btn.green,
+#main_content_Login_ForgotPasswordPanel .btn.green:hover, 
+#main_content_Login_ForgotPasswordPanel .btn.green:focus, 
+#main_content_Login_ForgotPasswordPanel .btn.green:active, 
+#main_content_Login_ForgotPasswordPanel .btn.green.active, 
+#main_content_Login_CreateUserForm_lnkSignupButton.btn.green,
+#main_content_Login_CreateUserForm_lnkSignupButton.btn.green:hover, 
+#main_content_Login_CreateUserForm_lnkSignupButton.btn.green:focus, 
+#main_content_Login_CreateUserForm_lnkSignupButton.btn.green:active {
+    background-color: #007498 !important;
+}
+ 
+.login-form a.login-help i, .login-form a.forgot-password-help i {
+    color: #007498;
+}
+
+.tooltip-label-icon {
+    color: #007498;
+}
+
+.forgot-password h4 {
+    font-weight: 400 !important;
+}
+
+.btn.blue {
+    border: none;
+    /*background-color: #007582;*/
+}
+
+.btn.green, .btn.green:hover {
+  background-color: #007498 !important;
+}
+
+.btn.default {
+  background-color: #4d90fe;
+}
+
+.btn.default:hover {
+  background-color: #4d90fe !important;
+}
+
+.start, a.start, span.title {
+    text-transform: none !important;
+}
+
+a.social_media, a.social_media:link, a.social_media:visited, a.social_media:active {
+    border-radius: 50% !important;
+    padding: 8px 11px 7px !important;
+}
+
+a.social_media:nth-of-type(1), a.social_media:link:nth-of-type(1) {
+    padding: 7.5px 13.5px !important;
+}
+
+a.social_media:nth-of-type(2), a.social_media:link:nth-of-type(2) {
+    padding: 7.5px 11.75px !important;
+}
+
+a.social_media:nth-of-type(4), a.social_media:link:nth-of-type(4) {
+    padding: 8px 11.75px 7px !important;
+}
+
+#navigation .row {
+	margin-bottom: 0px;
+}
+
+.page-sidebar ul > li > a > .arrow::before, .page-sidebar ul > li > span > a > .arrow::before, .control-label.required::after {
+    font-weight: 900 !important;
+}
+
+.page-sidebar-menu>li a i {
+    margin-top: 5px;
+}
+
+.tabbable-custom .nav-tabs>li.active {
+    border-top: 3px solid #007498;
+}
+
+.tile {
+    font-size: 13px;
+}
+.tile .tile-body > i {
+    margin-top: 0px;
+}
+
+.tile .tile-object {
+    min-height: 50px;
+}
+
+.bg-accent-cobalt {
+    background-color: #d41e48!important;
+    color: #fff !important;
+}
+
+.tile:hover {
+    border-color: #d41e48  !important;
+}
